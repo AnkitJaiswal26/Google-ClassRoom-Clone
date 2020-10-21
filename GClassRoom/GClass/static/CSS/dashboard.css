@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+
+*{
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: #5f6368;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper nav.navigation-sidebar{
+    display: none;
+    width: 300px;
+    height: 100vh;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav{
+    width: 300px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav ul{
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    margin: 10px 0;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav ul li a.nav-link{
+    height: 56px;
+    padding: 13px;
+    font-size: 16px;
+    vertical-align: center;
+    border-bottom-right-radius: 28px;
+    border-top-right-radius: 28px;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav ul li a.nav-link small{
+    font-size: 16px;
+    height: 24px;
+    padding-top: 2px;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav ul li a.nav-link svg{
+    margin-bottom: 3px;
+    margin-right: 20px;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav ul li:first-child{
+    margin-top: 10px;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav ul li:last-child{
+    margin-bottom: 10px;
+}
+
+.wrapper nav.navigation-sidebar .sidebar-nav ul li a.nav-link:hover{
+    background-color: #E3EEFC;
+}
+
+.wrapper .main{
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.wrapper .main .navbar{
+    width: 100%;
+    height: 70px;
+    color: black;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper .main .navbar button{
+    border: 0;
+    margin-right: 10px;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    padding-bottom: 4px;
+    border-radius: 50%;
+}
+
+.wrapper .main .navbar button:focus,
+.wrapper .main .navbar button:hover{
+    outline: none;
+    background-color: #eef3f8;
+}
+
+.wrapper .main .navbar div .navbar-brand{
+    color: #5f6368;
+}
+
+.wrapper .main .navbar div ul.navbar-nav li.nav-item a.nav-link{
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.wrapper .main .navbar div ul.navbar-nav li.nav-item a.nav-link:focus,
+.wrapper .main .navbar div ul.navbar-nav li.nav-item a.nav-link:hover{
+    outline: none;
+    background-color: #eef3f8;
+}
+
+.wrapper .main .main-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: calc(100vh - 70px);
+}
+
+.wrapper .main .main-section::-webkit-scrollbar{
+    display: none;
+}
+
+.wrapper .main .main-section .card{
+    width: 300px;
+    height: 300px;
+    margin: 24px 24px;
+    border-radius: 5px;
+}
+
+.wrapper .main .main-section .card:hover{
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .main .main-section .card .card-header{
+    height: 100px;
+    background-color: rgba(86, 110, 122, 0.8);
+    color: white;
+}
+
+.wrapper .main .main-section .card .card-header div.class-name{
+    margin-bottom: 10px;
+    color: white;
+}
+
+.wrapper .main .main-section .card .card-header div.class-name a{
+    display: block;
+    color: white;
+    overflow: hidden;
+}
+
+.wrapper .main .main-section .card .card-header div.class-name a.class-name{
+    font-size: 18px;
+}
+
+.wrapper .main .main-section .card .card-header .class-name a.subject-name{
+    font-size: 13px;
+}
+
+.wrapper .main .main-section .card .card-header .teacher-name p{
+    font-size: 16px;
+    margin: 0;
+}

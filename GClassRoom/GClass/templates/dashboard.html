@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--Poppins Font-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/CSS/dashboard.css">
+        <title>Dashboard</title>
+	</head>
+	<body>
+
+        <!--Wrapper Started here-->
+        <div class="wrapper">
+
+            <!--Sidebar Goes here-->
+            <nav id="navigation" class="navigation-sidebar" style="display: none;">
+                <div class="sidebar-nav">
+                    <ul class="sidebar-nav-ul" >
+                        <li class="sidenav-item active">
+                            <a class="nav-link" href="#">
+                                <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M">
+                                    <path d="M12 3L4 9v12h16V9l-8-6zm6 16h-3v-6H9v6H6v-9l6-4.5 6 4.5v9z"></path>
+                                </svg>
+                                Classes
+                            </a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="nav-link" href="#">
+                                <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M">
+                                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"></path>
+                                </svg>
+                                Calender
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="sidebar-nav-ul" >
+                        {% if has_group %}
+                            {% for user_room in user_rooms %}
+                                <li class="sidenav-item active">
+                                    <a class="nav-link" href="#">
+                                        {{ user_room.room_name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                    <ul class="sidebar-nav-ul" >
+                        <li class="sidenav-item active">
+                            <a class="nav-link" href="#">
+                                <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M">
+                                    <path d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM6.24 5h11.52l.83 1H5.42l.82-1zM5 19V8h14v11H5zm11-5.5l-4 4-4-4 1.41-1.41L11 13.67V10h2v3.67l1.59-1.59L16 13.5z"></path>
+                                </svg>
+                                Archived classes
+                            </a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="nav-link" href="#">
+                                <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M">
+                                    <path d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z"></path>
+                                    <circle cx="12" cy="12" r="3.5"></circle>
+                                </svg>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            
+            <!--Main Right Hand Side Part Goes Here-->
+            <div class="main">
+
+                <!--Top navbar-->
+                <nav class="navbar navbar-expand-sm navbar-dark " style="height: 70px;">
+					
+					<button class=""  type="button" onclick="showSidebar()" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class=" NMm5M">
+                                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                                </svg>
+                            </span>
+					</button>
+						
+					<div class=" navbar-collapse" id="">
+                        <a class="navbar-brand" href="#">Classroom</a>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+	    						<a class="nav-link" href="#">
+                                    <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M">
+                                        <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                                    </svg>
+                                </a>
+							</li>
+							<li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('join') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="light" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+                                        <g>
+                                            <path d="m21.5 24h-11c-1.378 0-2.5-1.122-2.5-2.5v-5c0-.276.224-.5.5-.5s.5.224.5.5v5c0 .827.673 1.5 1.5 1.5h11c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5h-11c-.827 0-1.5.673-1.5 1.5v5c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-5c0-1.378 1.122-2.5 2.5-2.5h11c1.378 0 2.5 1.122 2.5 2.5v19c0 1.378-1.122 2.5-2.5 2.5z"/>
+                                        </g>
+                                        <g>
+                                            <path d="m15.5 12.5h-15c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h15c.276 0 .5.224.5.5s-.224.5-.5.5z"/>
+                                        </g>
+                                        <g>
+                                            <path d="m11.5 16.5c-.128 0-.256-.049-.354-.146-.195-.195-.195-.512 0-.707l3.647-3.647-3.646-3.646c-.195-.195-.195-.512 0-.707s.512-.195.707 0l4 4c.195.195.195.512 0 .707l-4 4c-.098.097-.226.146-.354.146z"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+					</div>
+                </nav>
+
+                <!--Main Section Goes here-->
+                <div class="main-section">
+                    {% if has_group %}
+
+                        {% for user_room in user_rooms %}
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="class-name">
+                                        <a class="class-name" href="#">{{ user_room.room_name }}</a>
+                                        <a class="subject-name" href="">{{ user_room.subject_name }}</a>
+                                    </div>
+                                    <div class="teacher-name">
+                                        <p class="teahcher-name">{{ user_room.created_by }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}   
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!--Wrapper ended here-->
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+<script>
+    function showSidebar(){
+        var x = document.getElementById("navigation");
+        var y = document.getElementById('navbar');
+        if(x.style.display == "none"){
+            x.style.display = "flex";
+            y.style.width = "calc(100% - 304px)";
+        }
+        else{
+            x.style.display = "none";
+            y.style.width = "100%";
+        }
+    }
+</script>

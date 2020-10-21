@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Random CSS-->
+    <link rel="stylesheet" href="../static/CSS/homepage.css">
+</head>
+<body>
+    <!--Header Section Start-->
+    <div class="Banner" style="width: 100%; height: 100vh; ">
+        <div class="header">
+            <nav class="navbar navbar-expand-lg " id="navbar">
+                <a class="navbar-brand" href="#" style="font-size: 30px; font-weight: 500; line-height: 1.375em; letter-spacing: normal;">GClass</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="navbar()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li style="text-align: center;" class="nav-item active" >
+                            <a class="nav-link" href="{{ url_for('home') }}">Home </a>
+                        </li>
+                        <li style="text-align: center;" class="nav-item">
+                            <a class="nav-link" href="">About Us</a>
+                        </li>
+                        <li style="text-align: center;" class="nav-item">
+                            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                        </li>                    
+                        <li style="text-align: center;" class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <img src="../static/images/home.jpg">
+
+        <!--<div class="container" style="position: absolute; top: 50%; transform: translate(50%,-50%);">
+            <h2></h2>
+            <p style="font-size: 30px; width: 500px; text-align: center; color: white;">A single online platform for both JEE Main and MHT-CET mock test.</p>
+            <button class="start-learning-header">
+                <a href="">Join Classroom</a>
+            </button>
+        </div>-->
+    </div> 
+    <!--Header Section Complete-->
+
+    <!--Next Section Showing Information About Website-->
+    <div class="info container">
+        <h2>Our Services</h2>
+        <hr>
+        <p style="margin-bottom: 50px;">A free and easy tool helping educators efficiently manage and assess progress, while enhancing connections with learners from school, from home, or on the go.</p>
+
+        <div class="row">
+            <div class="col-md-3 col-10 offset-1 offset-md-0">
+                <span><i class="fa fa-3x fa-pencil-square-o" aria-hidden="true"></i></span>
+                <h5>Create</h5>
+                <p>Add students directly, or share a code or link so the whole class can join.</p>
+            </div>
+
+            <div class="col-md-3 col-10 offset-md-1 offset-1">
+                <span><i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i></span>
+                <h5>Class Work</h5>
+                <p>Set up a class in minutes and create class work that appear on students’ calendars</p>
+            </div>
+
+            <div class="col-md-3 col-10 offset-md-1 offset-1">
+                <span><i class="fa fa-3x fa-list-alt" aria-hidden="true"></i></span>
+                <h5>Communicate with Guardians</h5>
+                <p>Easily communicate with guardians and automatically send them updates</p>
+            </div>
+            <div class="col-md-3 col-10 offset-1 offset-md-0">
+                <span><i class="fa fa-3x fa-clock-o" aria-hidden="true"></i></span>
+                <h5>Move students forward</h5>
+                <p>Grade consistently and transparently with rubrics integrated into student work.</p>
+            </div>
+
+            <div class="col-md-3 col-10 offset-md-1 offset-1">
+                <span><i class="fa fa-3x fa-line-chart" aria-hidden="true"></i></span>
+                <h5>Analysis</h5>
+                <p>Enable originality reports to let students scan their own work for potential plagiarism.</p>
+            </div>
+
+            <div class="col-md-3 col-10 offset-md-1 offset-1">
+                <span><i class="fa fa-3x fa-refresh" aria-hidden="true"></i></span>
+                <h5>Feedback</h5>
+                <p>Store frequently used feedback in your comment bank for fast, personalized responses.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p style="text-align: left; color: white; text-align: center; padding-top: 15px; width: 100%;"> All Rights Reserved</p>
+    </div>
+
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        function navbar() {
+            var x = document.getElementById('navbar');
+            x.style.height = "auto";
+            x.style.zIndex = "100";
+            x.style.position = "absolute";
+            x.style.width = "100%";
+            x.style.backgroundColor = "whitesmoke";
+        }
+    </script>
+</body>
+</html>
